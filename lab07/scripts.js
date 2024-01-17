@@ -62,6 +62,6 @@ function renderTodoList() {
         }
     });
     
-    // แสดงรายการ Todo คร้ังแรก
+   
     renderTodoList();
 });
