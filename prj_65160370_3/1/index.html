@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ทำความรู้จักชลบุรี</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div id="app" class="container">
+        <h1>ทำความรู้จักชลบุรี</h1>
+        <div id="question" class="question-container">
+            <img src="https://upload.wikimedia.org/wikipedia/th/thumb/2/27/Buu0001.jpeg/420px-Buu0001.jpeg" alt="Question Image">
+            {{ currentQuestion.question }}
+        </div>
+        <div id="question">{{ currentQuestion.question }}</div>
+        <img :src="currentQuestion.imageUrl" alt="Image" v-if="currentQuestion.imageUrl" />
+        <input type="text" v-model="userAnswer" placeholder="Enter your answer...">
+        <button @click="checkAnswer">Check Answer</button>
+        <p :class="{ 'correct': isCorrect, 'incorrect': !isCorrect }">{{ result }}</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
